@@ -54,8 +54,43 @@
 
         </div>
 
-        <script src="scripts/ui.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/chat.js"></script>
+
+
+
+
+
+
+
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDVREeTWwRZi2357hAxMQMaO5rGqzl8lKw",
+                authDomain: "chat-rooms-daf8d.firebaseapp.com",
+                databaseURL: "https://chat-rooms-daf8d.firebaseio.com",
+                projectId: "chat-rooms-daf8d",
+                storageBucket: "chat-rooms-daf8d.appspot.com",
+                messagingSenderId: "72412532819",
+                appId: "1:72412532819:web:856140823dc7e28df1b6a6",
+                measurementId: "G-DPND3KNEZW"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            const DB = firebase.firestore();
+        </script>
+
+        <script src="src/ui.js"></script>
+        <script src="src/app.js"></script>
+        <script src="src/chat.js"></script>
     </body>
 </html>
