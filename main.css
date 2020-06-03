@@ -12,3 +12,22 @@
 .btn:focus {
     outline: none !important;
 }
+
+.username {
+    font-weight: bold;
+}
+
+.time {
+    color: #999;
+    font-size: 0.8em;
+}
+
+.update-messsage {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.updated-name {
+    color: #43D9BE;
+    font-weight: bold;
+}
