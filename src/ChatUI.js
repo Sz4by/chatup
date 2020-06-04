@@ -13,10 +13,11 @@ class ChatUI {
             { addSuffix: true }
         )
 
+        const name = data.username.replace(/ /g, '')
         this.list.innerHTML +=
          `
-            <li class="list-group-item">
-                <span class="username">${data.username}</span>
+            <li class="list-group-item" id="${name}">
+                <span class="username">${name}:</span>
                 <span class="message">${data.message}</span>
                 <div class="time">${when}</div>
             </li>

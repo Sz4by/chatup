@@ -1,9 +1,19 @@
+/* override bootstrap */
+.form-control:focus {
+    box-shadow: none;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+}
+
 .container {
     max-width: 600;
 }
 
 .btn {
     color: white;
+    width: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
     background: #43D9BE;
     outline: none !important;
     box-shadow: none !important;
@@ -11,6 +21,11 @@
 
 .btn:focus {
     outline: none !important;
+}
+
+.input-group-text {
+    width: 130px;
+    font-weight: bold;
 }
 
 .username {

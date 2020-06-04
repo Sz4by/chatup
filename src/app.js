@@ -5,6 +5,7 @@
 // updated name appears on the top left
 // put chat in an iframe
 // make animations
+// delete chat/messages option
 
 
 const chatList = document.querySelector('.chat-list')
@@ -45,3 +46,12 @@ rooms.addEventListener('click', e => {
         chatroom.getChats(chat => chatUI.render(chat))
     }
 })
+
+// initialize
+const chatUI = new ChatUI(chatList)
+const chatroom = new Chatroom('general', username)
+
+chatroom.getChats((data) => {
+    chatUI.render(data)
+}) 
+
