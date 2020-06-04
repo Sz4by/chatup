@@ -20,6 +20,12 @@ newChatForm.addEventListener('submit', e => {
     e.preventDefault()
     chatroom.addChat(newChatForm.message.value.trim())
         .then(() => newChatForm.reset())
+        .then(() => {
+            // scroll to the most recent message
+            let messageCount = document.getElementsByClassName(username).length -1
+            let lastMessage = document.getElementsByClassName(username)[messageCount]
+            document.querySelector('.chat-window').scrollTop = lastMessage.offsetTop
+        })
         .catch(err => console.log(err))
 })
 
@@ -38,7 +44,7 @@ newNameForm.addEventListener('submit', e => {
 })
 
 const username = localStorage.username ? localStorage.username : 'Anonymous'
-
+console.log(username)
 rooms.addEventListener('click', e => {
     if (e.target.tagName === 'BUTTON') {
         chatUI.clear()
@@ -49,9 +55,8 @@ rooms.addEventListener('click', e => {
 
 // initialize
 const chatUI = new ChatUI(chatList)
-const chatroom = new Chatroom('general', username)
+const chatroom = new Chatroom('public', username)
 
 chatroom.getChats((data) => {
     chatUI.render(data)
 }) 
-
