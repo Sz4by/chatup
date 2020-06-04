@@ -5,6 +5,10 @@
     -webkit-box-shadow: none;
 }
 
+*::selection {
+    text-shadow: 5px 5px 5px #43D9BE;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -12,13 +16,21 @@
  }
 
 .header > h1 {
+    cursor: pointer;
+    margin-right: 20px;
     color: rgb(31, 31, 31);
+}
+
+.header > h1:hover {
+    color: #0DAEC0;
+    transition: color 250ms;
 }
 
 #icon {
    width: 50px;
    height: 50px; 
    margin: 10px;
+   cursor: pointer;
 }
 
 .chat-window {
