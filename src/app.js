@@ -35,7 +35,7 @@ newChatForm.addEventListener('submit', e => {
 
 newNameForm.addEventListener('submit', e => {
     e.preventDefault()
-    const newName = newNameForm.name.value.trim()
+    const newName = newNameForm.name.value.trim().replace(/ /g, '')
     chatroom.updateName(newName)
     newNameForm.reset()
     updateMesssage.innerHTML =
