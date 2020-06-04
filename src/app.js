@@ -1,7 +1,18 @@
+
+// TODO:
+// create chat rooms on the right side
+// user can create unique room with password
+// updated name appears on the top left
+// put chat in an iframe
+// make animations
+
+
 const chatList = document.querySelector('.chat-list')
 const newChatForm = document.querySelector('.new-chat')
 const newNameForm = document.querySelector('.new-name')
 const updateMesssage = document.querySelector('.update-messsage')
+const rooms = document.querySelector('.chat-rooms')
+
 
 
 newChatForm.addEventListener('submit', e => {
@@ -27,9 +38,10 @@ newNameForm.addEventListener('submit', e => {
 
 const username = localStorage.username ? localStorage.username : 'Anonymous'
 
-const chatUI = new ChatUI(chatList)
-const chatroom = new Chatroom('gaming', username)
-
-chatroom.getChats((data) => {
-    chatUI.render(data)
+rooms.addEventListener('click', e => {
+    if (e.target.tagName === 'BUTTON') {
+        chatUI.clear()
+        chatroom.updateRoom(e.target.getAttribute('id'))
+        chatroom.getChats(chat => chatUI.render(chat))
+    }
 })

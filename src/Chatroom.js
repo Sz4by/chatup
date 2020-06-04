@@ -36,21 +36,11 @@ class Chatroom {
     }
 
     updateRoom(room) {
-        this.roon = room
+        this.room = room
+        console.log(`Updated room to ${room}`)
         if (this.unsub) {
             this.unsub()
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
