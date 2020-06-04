@@ -5,6 +5,30 @@
     -webkit-box-shadow: none;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.header > h1 {
+    color: rgb(31, 31, 31);
+}
+
+#icon {
+   width: 50px;
+   height: 50px; 
+   margin: 10px;
+}
+
+.chat-window {
+    scroll-behavior: smooth;
+}
+
+.chat-window::-webkit-scrollbar {
+    display: none;
+}
+
 .container {
     max-width: 600;
 }
@@ -30,6 +54,13 @@
 
 .username {
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.list-group-item {
+    font-size: 1.2em;
+    color: rgb(31, 31, 31);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .time {

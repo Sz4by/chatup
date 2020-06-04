@@ -16,8 +16,8 @@ class ChatUI {
         const name = data.username.replace(/ /g, '')
         this.list.innerHTML +=
          `
-            <li class="list-group-item" id="${name}">
-                <span class="username">${name}:</span>
+            <li class="list-group-item ${name}">
+                <span class="username">${name + ':'}</span>
                 <span class="message">${data.message}</span>
                 <div class="time">${when}</div>
             </li>
