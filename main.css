@@ -37,7 +37,7 @@
     scroll-behavior: smooth;
 }
 
-.loader {
+#loader {
     width: 100px;
     height: 100px;
     display: block;

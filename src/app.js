@@ -7,6 +7,15 @@
 // make dark mode
 
 
+function loader(query) {
+    let loading = '<img src="assets/spinner.gif" alt="Loading..." id="loader">'
+    document.querySelector(query).innerHTML = loading
+    setTimeout(() => {
+        document.getElementById('loader').remove()
+    }, 900)
+}
+
+
 const rooms = document.querySelector('.chat-rooms')
 const chatList = document.querySelector('.chat-list')
 const newChatForm = document.querySelector('.new-chat')
@@ -41,9 +50,12 @@ const username = localStorage.username ? localStorage.username : 'Anonymous'
 rooms.addEventListener('click', e => {
     if (e.target.tagName === 'BUTTON') {
         chatUI.clear()
-        chatroom.updateRoom(e.target.getAttribute('id'))
-        chatroom.getChats(chat => chatUI.render(chat))
-        setTimeout(() => {chatUI.scrollDown()}, 1500)
+        loader('.chat-list')
+        setTimeout(() => {
+            chatroom.updateRoom(e.target.getAttribute('id'))
+            chatroom.getChats(chat => chatUI.render(chat))
+            setTimeout(() => {chatUI.scrollDown()}, 500)
+        }, 1000)
     }
 })
 
@@ -54,6 +66,5 @@ const chatroom = new Chatroom('public', username)
 
 chatroom.getChats((data) => {
     chatUI.render(data)
-    setTimeout(() => {chatUI.scrollDown()}, 1100)
+    chatUI.scrollDown()
 }) 
-
