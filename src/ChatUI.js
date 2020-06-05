@@ -20,14 +20,22 @@ class ChatUI {
             { addSuffix: true }
         )
 
-        const name = data.username.replace(/ /g, '')
-        this.list.innerHTML +=
-         `
-            <li class="list-group-item ${name}">
-                <span class="username">${name + ':'}</span>
-                <span class="message">${data.message}</span>
-                <div class="time">${when}</div>
-            </li>
-        `
+        let loading = '<img src="assets/spinner.gif" alt="Loading..." class="loader">'
+        this.list.innerHTML = loading
+        
+        setTimeout(() => {this.list.innerHTML = ''}, 900)
+
+        setTimeout(() => {
+            const name = data.username.replace(/ /g, '')
+            this.list.innerHTML +=
+             `
+                <li class="list-group-item ${name}">
+                    <span class="username">${name + ':'}</span>
+                    <span class="message">${data.message}</span>
+                    <div class="time">${when}</div>
+                </li>
+            `
+        }, 1000)
+
     }
 }

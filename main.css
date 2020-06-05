@@ -37,6 +37,15 @@
     scroll-behavior: smooth;
 }
 
+.loader {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-top: 125px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .chat-window::-webkit-scrollbar {
     display: none;
 }
@@ -83,6 +92,20 @@
 .update-messsage {
     margin: 20px auto;
     text-align: center;
+}
+
+.fade-in {
+    animation: fade-in 2s;
+}
+
+.fade {
+    animation: fade-in-out 3s;
+}
+
+@keyframes fade-in-out {
+    0% { opacity: 0; }
+    50%   { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 .updated-name {
