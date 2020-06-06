@@ -55,7 +55,7 @@ rooms.addEventListener('click', e => {
             chatroom.updateRoom(e.target.getAttribute('id'))
             chatroom.getChats(chat => chatUI.render(chat))
             setTimeout(() => {chatUI.scrollDown()}, 500)
-        }, 1000)
+        }, 1100)
     }
 })
 
@@ -66,5 +66,5 @@ const chatroom = new Chatroom('public', username)
 
 chatroom.getChats((data) => {
     chatUI.render(data)
-    chatUI.scrollDown()
+    setTimeout(() => {chatUI.scrollDown()}, 250)
 }) 
