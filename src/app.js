@@ -5,14 +5,21 @@
 // updated name appears on the top left
 // delete chat/messages option
 // make dark mode
+// pick username on page load
 
+/*
+for(let x = 0; x < 20; x++) {
+    document.getElementById('message').value = 'sup'
+    document.getElementsByClassName('btn')[2].click()
+}
+*/
 
 function loader(query) {
     let loading = '<img src="assets/spinner.gif" alt="Loading..." id="loader">'
     document.querySelector(query).innerHTML = loading
     setTimeout(() => {
         document.getElementById('loader').remove()
-    }, 900)
+    }, 1000)
 }
 
 
@@ -55,7 +62,7 @@ rooms.addEventListener('click', e => {
             chatroom.updateRoom(e.target.getAttribute('id'))
             chatroom.getChats(chat => chatUI.render(chat))
             setTimeout(() => {chatUI.scrollDown()}, 500)
-        }, 1100)
+        }, 1200)
     }
 })
 

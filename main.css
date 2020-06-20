@@ -47,17 +47,16 @@
 }
 
 .chat-window::-webkit-scrollbar {
-    width: 0.25rem;
-    display: none;
+    width: 0.10rem;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+    background-color: #0DAEC0;
 }
 
 /*
 .chat-window::-webkit-scrollbar-track {
     background-color: #43D9BE;
-}
-
-.chat-window::-webkit-scrollbar-thumb {
-    background-color: #0DAEC0;
 }
 */
 
