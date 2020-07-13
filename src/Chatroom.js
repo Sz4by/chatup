@@ -76,13 +76,17 @@ class Chatroom {
             let password = secret.value
             if (password === this.password) {
                 this.validated = true
-                secret.value = ''
+                secret.value = null
                 closeValidation()
                 validatedMessage(this.username)
+            } else  if (password === '') {
+                error.innerText = 'That wouldn\'t work'
+                secret.style.borderColor = 'red'
+                secret.value = null
             } else {
                 error.innerText = 'Wrong Password, try again'
                 secret.style.borderColor = 'red'
-                secret.value = ''
+                secret.value = null
             }
         })
 
