@@ -14,6 +14,20 @@ for(let x = 0; x < 20; x++) {
 }
 */
 
+window.onload = function() {
+    const submit = document.querySelector('#submit')
+    const chooseName = document.querySelector('#choose-name')
+    
+    main.style.display = 'none'
+    chooseName.style.display = 'flex'
+
+    submit.addEventListener('click', () => {
+        setTimeout(() => {
+            main.style.display = 'block'
+            chooseName.style.display = 'none'
+        }, 3000)
+    })
+}
 
 function loader(query) {
     let loading = '<img src="assets/spinner.gif" alt="Loading..." id="loader">'

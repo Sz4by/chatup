@@ -12,10 +12,29 @@
 </head>
     <body>
 
+        <!-- choose name form -->
+
+        <div id="choose-name">
+            <div class="name-content">
+                <form class="new-name my-3">
+                    <div class="form-group">
+                        <div class="header">
+                            <img src="assets/icon.png" id="icon">
+                            <h1 class="my-4 text-center">ChatUp</h1>
+                        </div>
+                        <div class="input-group-prepend"></div>
+                        <input type="text" id="name" class="form-control" placeholder="     Choose your name" required>
+                        <input type="submit" id="submit" class="btn" value="enter" style="margin-top: 30px;">
+                    </div>
+                    <div class="update-messsage"></div>
+                </form>
+            </div>
+        </div>
+
         <!-- private room -->
 
         <div class="validate">
-            <div class="content">
+            <div class="validate-content">
                 <h3>Private Room</h3>
                 <input type="password" id="secret" placeholder="  Enter secret password" required>
                 <span id="error" style="color: #CE0000;"></span>
@@ -48,29 +67,12 @@
 
             <form class="new-chat my-3">
                 <div class="input-group">
-                    <div class="input-group-prepend">
-                        <!-- <div class="input-group-text"></div> -->
-                    </div>
+                    <div class="input-group-prepend"></div>
                     <input type="text" id="message" class="form-control" placeholder="Type your message" required>
                     <div class="input-group-append">
                         <input type="submit" class="btn" value="send">
                     </div>
                 </div>
-            </form>
-
-            <!-- update name form -->
-
-            <form class="new-name my-3">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <!-- <div class="input-group-text"></div> -->
-                    </div>
-                    <input type="text" id="name" class="form-control" placeholder="Choose your name" required>
-                    <div class="input-group-append">
-                        <input type="submit" class="btn" value="update" >
-                    </div>
-                </div>
-                <div class="update-messsage"></div>
             </form>
         </div>
 

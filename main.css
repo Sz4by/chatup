@@ -5,6 +5,44 @@
     -webkit-box-shadow: none;
 }
 
+/* CHOOSE NAME WINDOW */
+
+#choose-name {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(#96DEDA, #50C9C3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s;
+}
+
+.name-content {
+    width: 250px;
+    height: 300px;
+    padding: 20px;
+    text-align: center;
+    background: #FFF;
+    border: 1px solid #22AAB9;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#choose-name .header {
+    margin: -30px 0 20px 0;
+}
+
+#choose-name img,
+#choose-name h1 {
+    cursor: default;
+    pointer-events: none;
+}
+
+/* VALIDATE WINDOW */
+
 #secret:focus::-webkit-input-placeholder {
     color: transparent;
 }
@@ -42,7 +80,7 @@
     }
 }
 
-.content {
+.validate-content {
     width: 250px;
     height: 300px;
     padding: 20px;
@@ -51,9 +89,10 @@
     border: 1px solid #22AAB9;
     border-radius: 5px;
     position: relative;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-.content > input {
+.validate-content > input {
     padding: 5px;
     display: block;
     margin: 20px auto;
@@ -61,11 +100,11 @@
     border-radius: 5px;
 }
 
-.content > h3 {
+.validate-content > h3 {
     color: rgb(31, 31, 31);
 }
 
-.content > a {
+.validate-content > a {
     color: #FFF;
     margin: 10px 0;
     font-size: 18px;
@@ -82,7 +121,7 @@
     transition: color 500ms;
 }
 
-.content > a:hover {
+.validate-content > a:hover {
     background-image: linear-gradient(-180deg, #B7F8DB, #50A7C2);
 }
 
@@ -100,12 +139,14 @@
     cursor: pointer;
     margin-right: 20px;
     color: rgb(31, 31, 31);
+    transition: color 500ms;
 }
 
 .header > h1:hover {
     color: #0DAEC0;
-    transition: color 250ms;
 }
+
+/* MAIN */
 
 #icon {
    width: 50px;
@@ -209,21 +250,33 @@
 
 @media only screen and (min-height: 500px) {
     .chat-window {
-        height: 270px !important;
+        height: 300px !important;
     }
 }
 @media only screen and (min-height: 640px) {
     .chat-window {
-        height: 340px !important;
+        height: 380px !important;
     }
 }
 @media only screen and (min-height: 730px) {
     .chat-window {
-        height: 430px !important;
+        height: 470px !important;
     }
 }
 @media only screen and (min-height: 810px) {
     .chat-window {
-        height: 500px !important;
+        height: 550px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .chat-window {
+        font-size: 13px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .chat-window {
+        height: 600px !important;
     }
 }
