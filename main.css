@@ -20,6 +20,7 @@
 }
 
 .name-content {
+    top: -100px;
     width: 250px;
     height: 300px;
     padding: 20px;
@@ -52,6 +53,7 @@
 }
 
 #secret {
+    
     margin-bottom: 5px;
 }
 
@@ -81,7 +83,7 @@
 }
 
 .validate-content {
-    width: 250px;
+    width: 260px;
     height: 300px;
     padding: 20px;
     text-align: center;
@@ -250,22 +252,22 @@
 
 @media only screen and (min-height: 500px) {
     .chat-window {
-        height: 300px !important;
+        height: 410px !important;
     }
 }
 @media only screen and (min-height: 640px) {
     .chat-window {
-        height: 380px !important;
+        height: 480px !important;
     }
 }
 @media only screen and (min-height: 730px) {
     .chat-window {
-        height: 470px !important;
+        height: 570px !important;
     }
 }
 @media only screen and (min-height: 810px) {
     .chat-window {
-        height: 550px !important;
+        height: 650px !important;
     }
 }
 
@@ -273,10 +275,13 @@
     .chat-window {
         font-size: 13px !important;
     }
+    .header {
+        display: none;
+    }
 }
 
 @media (min-width: 1024px) {
     .chat-window {
-        height: 600px !important;
+        height: 650px !important;
     }
 }
