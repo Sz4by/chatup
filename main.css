@@ -146,13 +146,15 @@
 }
 
 .btn {
-    color: white;
+    color: #FFF;
     width: 100px;
     font-weight: bold;
     text-transform: uppercase;
-    background: #43D9BE;
     outline: none !important;
     box-shadow: none !important;
+    border: 1px solid #B0BEC5;
+    background-image: linear-gradient(90deg, #50A7C2, #B7F8DB);
+    transition: color 500ms;
 }
 
 .btn:focus {
