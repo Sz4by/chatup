@@ -53,7 +53,6 @@
 }
 
 #secret {
-    
     margin-bottom: 5px;
 }
 
@@ -83,6 +82,7 @@
 }
 
 .validate-content {
+    top: -100px;
     width: 260px;
     height: 300px;
     padding: 20px;
@@ -137,18 +137,24 @@
     justify-content: center;
  }
 
-.header > h1 {
+/* MAIN */
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.main-header > h1 {
     cursor: pointer;
     margin-right: 20px;
     color: rgb(31, 31, 31);
     transition: color 500ms;
 }
 
-.header > h1:hover {
+.main-header > h1:hover {
     color: #0DAEC0;
 }
-
-/* MAIN */
 
 #icon {
    width: 50px;
@@ -270,16 +276,14 @@
         height: 650px !important;
     }
 }
-
 @media (max-width: 1024px) {
     .chat-window {
         font-size: 13px !important;
     }
-    .header {
+    .main-header {
         display: none;
     }
 }
-
 @media (min-width: 1024px) {
     .chat-window {
         height: 650px !important;
