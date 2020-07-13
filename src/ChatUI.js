@@ -11,7 +11,9 @@ class ChatUI {
         // scroll to the most recent message
         const messageCount = document.getElementsByClassName('list-group-item').length -1
         const lastMessage = document.getElementsByClassName('list-group-item')[messageCount]
-        document.querySelector('.chat-window').scrollTop = lastMessage.offsetTop
+        if (lastMessage !== 'undefined' || lastMessage !== null) {
+            document.querySelector('.chat-window').scrollTop = lastMessage.offsetTop
+        }
     }
 
     render(data) {

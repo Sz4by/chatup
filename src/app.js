@@ -14,6 +14,7 @@ for(let x = 0; x < 20; x++) {
 }
 */
 
+
 function loader(query) {
     let loading = '<img src="assets/spinner.gif" alt="Loading..." id="loader">'
     document.querySelector(query).innerHTML = loading
@@ -67,6 +68,7 @@ rooms.addEventListener('click', e => {
 })
 
 // initialize
+
 const chatUI = new ChatUI(chatList)
 const chatroom = new Chatroom('public', username)
 

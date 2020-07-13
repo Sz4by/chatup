@@ -1,9 +1,12 @@
 class Chatroom {
+
     constructor(room, username) {
+        this.unsub
         this.room = room
         this.username = username
         this.chats = db.collection('chats')
-        this.unsub
+        this.password = 'DamnTrainCJ'
+        this.validated = false
     }
 
     async addChat(message) {
@@ -35,7 +38,61 @@ class Chatroom {
         localStorage.setItem('username', username)
     }
 
+    validate() {
+        const main = document.querySelector('#main')
+        const error = document.querySelector('#error')
+        const enter = document.querySelector('#enter')
+        const cancel = document.querySelector('#cancel')
+        const secret = document.querySelector('#secret')
+        const validate = document.querySelector('.validate')
+        const publicRoom = document.querySelector('#public')
+        const privateRoom = document.querySelector('#private')
+        const updated = document.querySelector('.update-messsage')
+
+        main.style.display = 'none'
+        validate.style.display = 'flex'
+
+        function validatedMessage(name) {
+            updated.innerHTML =
+            `
+            <div class="fade">
+               Welcome <span class="updated-name">${name}!</span>
+            </div>
+            `
+           setTimeout(() => {updateMesssage.innerText = ""}, 2500)
+        }
+
+        function closeValidation() {
+            main.style.display = 'block'
+            validate.style.display = 'none'
+        }
+
+        enter.addEventListener('click', () => {
+            let password = secret.value
+            if (password === this.password) {
+                this.validated = true
+                secret.value = ''
+                closeValidation()
+                validatedMessage(this.username)
+            } else {
+                error.innerText = 'Wrong Password'
+                secret.style.borderColor = 'red'
+                secret.value = ''
+            }
+        })
+
+        cancel.addEventListener('click', () => {
+            closeValidation()
+            publicRoom.click()
+        })
+    }
+
     updateRoom(room) {
+        if (room === 'private') { 
+            if (this.validated === false) {
+                this.validate()
+            } 
+        }
         this.room = room
         console.log(`Updated room to ${room}`)
         if (this.unsub) {

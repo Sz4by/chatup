@@ -5,6 +5,87 @@
     -webkit-box-shadow: none;
 }
 
+#secret:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#secret::selection {
+    background: #77D5D0;
+}
+
+#secret {
+    margin-bottom: 5px;
+}
+
+#info {
+    animation: fadeIn 1.5s;
+}
+
+.validate {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(#96DEDA, #50C9C3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+
+.content {
+    width: 250px;
+    height: 300px;
+    padding: 20px;
+    text-align: center;
+    background: #FFF;
+    border: 1px solid #22AAB9;
+    border-radius: 5px;
+    position: relative;
+}
+
+.content > input {
+    padding: 5px;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #43D9BE;
+    border-radius: 5px;
+}
+
+.content > h3 {
+    color: rgb(31, 31, 31);
+}
+
+.content > a {
+    color: #FFF;
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(180deg, #50A7C2, #B7F8DB);
+    transition: color 500ms;
+}
+
+.content > a:hover {
+    background-image: linear-gradient(-180deg, #B7F8DB, #50A7C2);
+}
+
 *::selection {
     text-shadow: 5px 5px 5px #43D9BE;
 }
