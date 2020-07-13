@@ -56,10 +56,15 @@ class Chatroom {
             updated.innerHTML =
             `
             <div class="fade">
-               Welcome <span class="updated-name">${name}!</span>
+               Welcome to the secret chat <span class="updated-name">${name}!</span>
             </div>
             `
            setTimeout(() => {updateMesssage.innerText = ""}, 2500)
+        }
+
+        function clearError() {
+            error.innerText = ''
+            secret.style.borderColor = ''
         }
 
         function closeValidation() {
@@ -75,7 +80,7 @@ class Chatroom {
                 closeValidation()
                 validatedMessage(this.username)
             } else {
-                error.innerText = 'Wrong Password'
+                error.innerText = 'Wrong Password, try again'
                 secret.style.borderColor = 'red'
                 secret.value = ''
             }
@@ -84,6 +89,7 @@ class Chatroom {
         cancel.addEventListener('click', () => {
             closeValidation()
             publicRoom.click()
+            clearError()
         })
     }
 
@@ -100,4 +106,3 @@ class Chatroom {
         }
     }
 }
-
