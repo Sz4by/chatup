@@ -289,10 +289,13 @@
 }
 @media (max-width: 1024px) {
     .chat-window {
-        font-size: 12px !important;
+        font-size: 11px !important;
     }
     .main-header {
         display: none;
+    }
+    #secret {
+        margin-right: 15px;
     }
 }
 @media (min-width: 1024px) {
