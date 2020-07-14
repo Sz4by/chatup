@@ -266,25 +266,29 @@
     font-weight: bold;
 }
 
+.welcome-message {
+    margin-top: 5px;
+    text-align: center;
+}
 
 @media only screen and (min-height: 500px) {
     .chat-window {
-        height: 410px !important;
+        height: 395px !important;
     }
 }
 @media only screen and (min-height: 640px) {
     .chat-window {
-        height: 480px !important;
+        height: 465px !important;
     }
 }
 @media only screen and (min-height: 730px) {
     .chat-window {
-        height: 570px !important;
+        height: 555px !important;
     }
 }
 @media only screen and (min-height: 810px) {
     .chat-window {
-        height: 650px !important;
+        height: 635px !important;
     }
 }
 @media (max-width: 1024px) {
@@ -300,6 +304,6 @@
 }
 @media (min-width: 1024px) {
     .chat-window {
-        height: 650px !important;
+        height: 635px !important;
     }
 }

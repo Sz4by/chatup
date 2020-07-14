@@ -48,15 +48,16 @@ class Chatroom {
         const publicRoom = document.querySelector('#public')
         const privateRoom = document.querySelector('#private')
         const updated = document.querySelector('.update-messsage')
+        const welcome = document.querySelector('#welcome-message')
 
         main.style.display = 'none'
         validate.style.display = 'flex'
 
         function validatedMessage(name) {
-            updated.innerHTML =
+            welcome.innerHTML =
             `
-            <div class="fade">
-               Welcome to the secret chat <span class="updated-name">${name}!</span>
+            <div class="fade welcome-message">
+               Welcome <span class="updated-name">${name}!</span>
             </div>
             `
            setTimeout(() => {updateMesssage.innerText = ""}, 2500)
