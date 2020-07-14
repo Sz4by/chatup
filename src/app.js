@@ -5,7 +5,6 @@
 // updated name appears on the top left
 // delete chat/messages option
 // make dark mode
-// pick username on page load
 
 /*
 for(let x = 0; x < 20; x++) {
@@ -14,20 +13,39 @@ for(let x = 0; x < 20; x++) {
 }
 */
 
+function generateRandomName() {
+    function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1) }
+    function randomNumber(min, max) { return Math.floor(Math.random() * (max - min)) + min }
+    
+    var first = ["abandoned","able","absolute","adorable","adventurous","academic","acceptable","youthful","yummy","zany","zealous","zesty","zigzag","rocky"];
+    var second = ["load","mirror","neck","pension","plate","ruin","ship","skirt","slice","snow","specialist","punch","silly","spell","stretch","stupid","temporary"];
+    
+    return capitalize(first[randomNumber(0, first.length + 1)]) 
+           + ' ' +
+           capitalize(second[randomNumber(0, second.length + 1)])
+           + ' ' +
+           randomNumber(0, 99)
+}
+
+
 window.onload = function() {
     const submit = document.querySelector('#submit')
     const chooseName = document.querySelector('#choose-name')
-    
+    const name = document.querySelector('#name')
     main.style.display = 'none'
     chooseName.style.display = 'flex'
 
     submit.addEventListener('click', () => {
+        if (name.value == '') {
+            name.value = generateRandomName()
+        }
         setTimeout(() => {
             main.style.display = 'block'
             chooseName.style.display = 'none'
         }, 3000)
     })
 }
+
 
 function loader(query) {
     let loading = '<img src="assets/spinner.gif" alt="Loading..." id="loader">'
