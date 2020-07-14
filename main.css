@@ -20,9 +20,8 @@
 }
 
 .name-content {
-    top: -100px;
     width: 250px;
-    height: 300px;
+    height: 320px;
     padding: 20px;
     text-align: center;
     background: #FFF;
@@ -82,7 +81,6 @@
 }
 
 .validate-content {
-    top: -100px;
     width: 260px;
     height: 300px;
     padding: 20px;
@@ -119,12 +117,24 @@
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
-    background-image: linear-gradient(180deg, #50A7C2, #B7F8DB);
+    background-image: linear-gradient(180deg, #50A7C2, #80D0C7);  
     transition: color 500ms;
 }
 
 .validate-content > a:hover {
-    background-image: linear-gradient(-180deg, #B7F8DB, #50A7C2);
+    background-image: linear-gradient(-180deg, #80D0C7, #50A7C2);
+}
+
+#enter {
+    position: absolute;
+    top: 155px;
+    left: 77px;
+}
+
+#cancel {
+    position: absolute;
+    top: 210px;
+    left: 70px;
 }
 
 *::selection {
@@ -135,6 +145,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: -15px !important;
  }
 
 /* MAIN */
@@ -202,7 +213,7 @@
     outline: none !important;
     box-shadow: none !important;
     border: 1px solid #B0BEC5;
-    background-image: linear-gradient(90deg, #50A7C2, #B7F8DB);
+    background-image: linear-gradient(90deg, #50A7C2, #80D0C7); /* #50A7C2 → #B7F8DB */
     transition: color 500ms;
 }
 
@@ -278,7 +289,7 @@
 }
 @media (max-width: 1024px) {
     .chat-window {
-        font-size: 13px !important;
+        font-size: 12px !important;
     }
     .main-header {
         display: none;
