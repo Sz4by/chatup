@@ -84,7 +84,7 @@ class Chatroom {
                 secret.style.borderColor = 'red'
                 secret.value = null
             } else {
-                error.innerText = 'Wrong Password, try again'
+                error.innerText = 'Who told you that?'
                 secret.style.borderColor = 'red'
                 secret.value = null
             }
