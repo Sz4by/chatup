@@ -5,7 +5,7 @@ class Chatroom {
         this.room = room
         this.username = username
         this.chats = db.collection('chats')
-        this.password = 'DamnTrainCJ'
+        this.password = 'DamnTrainCJ!69'
         this.validated = false
     }
 
