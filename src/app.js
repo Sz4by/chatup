@@ -107,5 +107,5 @@ const chatroom = new Chatroom('public', username)
 
 chatroom.getChats((data) => {
     chatUI.render(data)
-    setTimeout(() => {chatUI.scrollDown()}, 250)
+    setTimeout(() => {chatUI.scrollDown()}, 500)
 }) 

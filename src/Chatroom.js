@@ -1,5 +1,4 @@
 class Chatroom {
-
     constructor(room, username) {
         this.unsub
         this.room = room
