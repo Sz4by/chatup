@@ -193,7 +193,8 @@
 
 .chat-window::-webkit-scrollbar-thumb {
     background-color: #0DAEC0 !important;
-    opacity: 0.5;
+    border-radious: 5px !important;
+    opacity: 0.5 !important;
 }
 
 /*
