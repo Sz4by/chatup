@@ -188,13 +188,11 @@
 }
 
 .chat-window::-webkit-scrollbar {
-    width: 0.15rem;
+    width: 0.10rem;
 }
 
 .chat-window::-webkit-scrollbar-thumb {
     background-color: #0DAEC0;
-    border-radious: 5px;
-    opacity: 0.5;
 }
 
 /*
