@@ -14,6 +14,7 @@ for(let x = 0; x < 20; x++) {
 */
 
 function generateRandomName() {
+    /* credit to: Thomas Konings @ https://gist.github.com/tkon99 */
     function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1) }
     function randomNumber(min, max) { return Math.floor(Math.random() * (max - min)) + min }
     
@@ -94,7 +95,7 @@ rooms.addEventListener('click', e => {
         setTimeout(() => {
             chatroom.updateRoom(e.target.getAttribute('id'))
             chatroom.getChats(chat => chatUI.render(chat))
-            setTimeout(() => {chatUI.scrollDown()}, 500)
+            setTimeout(() => {chatUI.scrollDown()}, 1000)
         }, 1200)
     }
 })
@@ -107,5 +108,5 @@ const chatroom = new Chatroom('public', username)
 
 chatroom.getChats((data) => {
     chatUI.render(data)
-    setTimeout(() => {chatUI.scrollDown()}, 500)
+    setTimeout(() => {chatUI.scrollDown()}, 1000)
 }) 
