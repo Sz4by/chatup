@@ -1,6 +1,6 @@
 // https://console.firebase.google.com/u/0/project/chat-rooms-daf8d/database/firestore/data~2F
 
-var firebaseConfig = {
+var config = {
     apiKey: "AIzaSyDVREeTWwRZi2357hAxMQMaO5rGqzl8lKw",
     authDomain: "chat-rooms-daf8d.firebaseapp.com",
     databaseURL: "https://chat-rooms-daf8d.firebaseio.com",
@@ -13,6 +13,5 @@ var firebaseConfig = {
 
 // Initialize Firebase
 
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+firebase.initializeApp(config);
 const db = firebase.firestore();
