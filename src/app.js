@@ -101,12 +101,12 @@ rooms.addEventListener('click', e => {
 })
 
 // initialize
-
 const chatUI = new ChatUI(chatList)
 const chatroom = new Chatroom('public', username)
 
-
-chatroom.getChats((data) => {
-    chatUI.render(data)
-    setTimeout(() => {chatUI.scrollDown()}, 500)
-}) 
+document.getElementById('submit').addEventListener('click', () => {
+    chatroom.getChats((data) => {
+        chatUI.render(data)
+        setTimeout(() => {chatUI.scrollDown()}, 3000)
+    }) 
+})
