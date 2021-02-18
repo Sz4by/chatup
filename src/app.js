@@ -53,7 +53,7 @@ function loader(query) {
     document.querySelector(query).innerHTML = loading
     setTimeout(() => {
         document.getElementById('loader').remove()
-    }, 1000)
+    }, 10000)
 }
 
 
