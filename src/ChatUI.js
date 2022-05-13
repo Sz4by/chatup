@@ -4,7 +4,7 @@ class ChatUI {
     }
 
     clear() {
-        this.list.innerHTML = ""
+        this.list.innerHTML = ''
     }
     
     scrollDown() {

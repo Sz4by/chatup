@@ -1,6 +1,6 @@
 // https://console.firebase.google.com/u/0/project/chat-rooms-daf8d/database/firestore/data~2F
 
-var config = {
+const config = {
     apiKey: "AIzaSyDVREeTWwRZi2357hAxMQMaO5rGqzl8lKw",
     authDomain: "chat-rooms-daf8d.firebaseapp.com",
     databaseURL: "https://chat-rooms-daf8d.firebaseio.com",
@@ -12,6 +12,8 @@ var config = {
 };
 
 // Initialize Firebase
+firebase.initializeApp(config)
+const db = firebase.firestore()
 
-firebase.initializeApp(config);
-const db = firebase.firestore();
+// Password for the private chat room
+const privateRoomPassword = 'DamnTrainCJ!69'

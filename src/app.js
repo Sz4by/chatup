@@ -37,7 +37,8 @@ window.onload = function() {
     chooseName.style.display = 'flex'
 
     submit.addEventListener('click', () => {
-        if (name.value == '') {
+        this.room = 'public'
+        if (name.value.trim() === '' || name.value.trim() === undefined) {
             name.value = generateRandomName()
         }
         setTimeout(() => {
@@ -56,7 +57,6 @@ function loader(query) {
     }, 1500)
 }
 
-
 const rooms = document.querySelector('.chat-rooms')
 const chatList = document.querySelector('.chat-list')
 const newChatForm = document.querySelector('.new-chat')
@@ -66,10 +66,14 @@ const updateMesssage = document.querySelector('.update-messsage')
 
 newChatForm.addEventListener('submit', e => {
     e.preventDefault()
-    chatroom.addChat(newChatForm.message.value.trim())
-        .then(() => newChatForm.reset())
-        .then(() => {chatUI.scrollDown()})
-        .catch(err => console.log(err))
+    let msg = newChatForm.message.value.trim()
+
+    if (msg !== '') {
+        chatroom.addChat(msg)
+            .then(() => newChatForm.reset())
+            .then(() => { chatUI.scrollDown() })
+            .catch(err => console.log(err))
+    }
 })
 
 newNameForm.addEventListener('submit', e => {
@@ -83,7 +87,7 @@ newNameForm.addEventListener('submit', e => {
         Updated name to <span class="updated-name">${newName}</span>
      </div>
      `
-    setTimeout(() => {updateMesssage.innerText = ""}, 2500)
+    setTimeout(() => { updateMesssage.innerText = '' }, 2500)
 })
 
 const username = localStorage.username ? localStorage.username : 'Anonymous'
@@ -95,7 +99,7 @@ rooms.addEventListener('click', e => {
         setTimeout(() => {
             chatroom.updateRoom(e.target.getAttribute('id'))
             chatroom.getChats(chat => chatUI.render(chat))
-            setTimeout(() => {chatUI.scrollDown()}, 500)
+            setTimeout(() => { chatUI.scrollDown() }, 500)
         }, 1200)
     }
 })
@@ -107,6 +111,6 @@ const chatroom = new Chatroom('public', username)
 document.getElementById('submit').addEventListener('click', () => {
     chatroom.getChats((data) => {
         chatUI.render(data)
-        setTimeout(() => {chatUI.scrollDown()}, 3000)
+        setTimeout(() => { chatUI.scrollDown() }, 3000)
     }) 
 })

@@ -2,10 +2,10 @@ class Chatroom {
     constructor(room, username) {
         this.unsub
         this.room = room
-        this.username = username
-        this.chats = db.collection('chats')
-        this.password = 'DamnTrainCJ!69'
         this.validated = false
+        this.username = username
+        this.password = privateRoomPassword
+        this.chats = db.collection('chats')
     }
 
     async addChat(message) {
@@ -59,7 +59,7 @@ class Chatroom {
                Welcome <span class="updated-name">${name}!</span>
             </div>
             `
-           setTimeout(() => {updateMesssage.innerText = ""}, 2500)
+           setTimeout(() => { updateMesssage.innerText = '' }, 2500)
         }
 
         function clearError() {
