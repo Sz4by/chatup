@@ -1,5 +1,9 @@
-// https://console.firebase.google.com/u/0/project/chat-rooms-daf8d/database/firestore/data~2F
+/*  
+    Attention recruiters or anyone that might be viewing this,
+    obviously I'd gitignore this file, but this app is for exhibition purposes
+*/
 
+// https://console.firebase.google.com/u/0/project/chat-rooms-daf8d/database/firestore/data~2F
 const config = {
     apiKey: "AIzaSyDVREeTWwRZi2357hAxMQMaO5rGqzl8lKw",
     authDomain: "chat-rooms-daf8d.firebaseapp.com",
@@ -9,7 +13,7 @@ const config = {
     messagingSenderId: "72412532819",
     appId: "1:72412532819:web:856140823dc7e28df1b6a6",
     measurementId: "G-DPND3KNEZW"
-};
+}
 
 // Initialize Firebase
 firebase.initializeApp(config)
