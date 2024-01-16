@@ -5,6 +5,10 @@
     -webkit-box-shadow: none;
 }
 
+.hidden {
+    display: none;
+}
+
 /* CHOOSE NAME WINDOW */
 
 #choose-name {

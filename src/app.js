@@ -6,13 +6,6 @@
 // delete chat/messages option
 // make dark mode
 
-/*
-for(let x = 0; x < 20; x++) {
-    document.getElementById('message').value = 'sup'
-    document.getElementsByClassName('btn')[2].click()
-}
-*/
-
 function generateRandomName() {
     /* credit to: Thomas Konings @ https://gist.github.com/tkon99 */
     function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1) }
@@ -30,6 +23,8 @@ function generateRandomName() {
 
 
 window.onload = function() {
+    document.querySelector('body').classList.remove('hidden')
+
     const submit = document.querySelector('#submit')
     const chooseName = document.querySelector('#choose-name')
     const name = document.querySelector('#name')
