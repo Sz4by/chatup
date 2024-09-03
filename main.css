@@ -9,6 +9,16 @@
     display: none;
 }
 
+#page-loader {
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    margin: -250px 0 0 -150px;
+    animation: fadeOut 1.5s;
+}
+
 /* CHOOSE NAME WINDOW */
 
 #choose-name {
@@ -84,6 +94,15 @@
     }
 }
 
+@keyframes fadeOut {
+    from { 
+        opacity: 1;
+    }
+    to { 
+        opacity: 0; 
+    }
+}
+
 .validate-content {
     width: 260px;
     height: 300px;
@@ -155,6 +174,10 @@
  }
 
 /* MAIN */
+
+#main {
+    animation: fadeIn 1.5s;
+}
 
 .main-header {
     display: flex;

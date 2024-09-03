@@ -10,72 +10,80 @@
     <link rel="stylesheet" href="main.css">
     <title>ChatUp</title>
 </head>
-    <body class="hidden">
-        
-        <!-- choose name form -->
+    <body>
 
-        <div id="choose-name">
-            <div class="name-content">
-                <form class="new-name my-3">
-                    <div class="form-group">
-                        <div class="header">
-                            <img src="assets/icon.png" id="icon">
-                            <h1 class="my-4 text-center">ChatUp</h1>
+        <div id="page-loader">
+            <img src="assets/spinner.gif" alt="Loading..." id="loader">
+        </div>
+
+        
+        <div id="root" class="hidden">
+            
+            <!-- choose name form -->
+
+            <div id="choose-name">
+                <div class="name-content">
+                    <form class="new-name my-3">
+                        <div class="form-group">
+                            <div class="header">
+                                <img src="assets/icon.png" id="icon">
+                                <h1 class="my-4 text-center">ChatUp</h1>
+                            </div>
+                            <div class="input-group-prepend"></div>
+                            <input type="text" id="name" class="form-control" placeholder="     Choose your name     " required>
+                            <input type="submit" id="submit" class="btn" value="enter" style="margin-top: 30px;">
                         </div>
-                        <div class="input-group-prepend"></div>
-                        <input type="text" id="name" class="form-control" placeholder="Choose your name" required>
-                        <input type="submit" id="submit" class="btn" value="enter" style="margin-top: 30px;">
+                        <div class="update-messsage"></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- private room -->
+
+            <div class="validate">
+                <div class="validate-content">
+                    <h3>Private Room</h3>
+                    <input type="password" id="secret" placeholder=" Enter secret password" required>
+                    <span id="error" style="color: #CE0000;"></span>
+                    <br>
+                    <a id="enter">Enter</a>
+                    <a id="cancel">Cancel</a>
+                </div>
+            </div>
+
+            <!-- main -->
+
+            <span id="welcome-message"></span>
+
+            <div id="main" class="hidden container my-4">
+                <div class="main-header">
+                    <img src="assets/icon.png" id="icon" onclick="location.reload()">
+                    <h1 class="my-4 text-center" onclick="location.reload()">ChatUp</h1>
+                </div>
+
+                <div class="chat-rooms mb-3 text-center">
+                    <button class="btn" id="public">public</button>
+                    <button class="btn" id="private">private</button>
+                </div>
+
+                <!-- chat list -->
+
+                    <div class="chat-window" style="overflow-y: scroll; height: 400px;">
+                        <ul class="chat-list list-group"></ul>
                     </div>
-                    <div class="update-messsage"></div>
+
+                <!-- new chat form -->
+
+                <form class="new-chat my-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input type="text" id="message" class="form-control" placeholder="Type your message" required>
+                        <div class="input-group-append">
+                            <input type="submit" class="btn" value="send">
+                        </div>
+                    </div>
                 </form>
             </div>
-        </div>
-
-        <!-- private room -->
-
-        <div class="validate">
-            <div class="validate-content">
-                <h3>Private Room</h3>
-                <input type="password" id="secret" placeholder=" Enter secret password" required>
-                <span id="error" style="color: #CE0000;"></span>
-                <br>
-                <a id="enter">Enter</a>
-                <a id="cancel">Cancel</a>
-            </div>
-        </div>
-
-        <!-- main -->
-
-        <span id="welcome-message"></span>
-
-        <div id="main" class="container my-4">
-            <div class="main-header">
-                <img src="assets/icon.png" id="icon" onclick="location.reload()">
-                <h1 class="my-4 text-center" onclick="location.reload()">ChatUp</h1>
-            </div>
-
-            <div class="chat-rooms mb-3 text-center">
-                <button class="btn" id="public">public</button>
-                <button class="btn" id="private">private</button>
-            </div>
-
-            <!-- chat list -->
-
-                <div class="chat-window" style="overflow-y: scroll; height: 400px;">
-                    <ul class="chat-list list-group"></ul>
-                </div>
-
-            <!-- new chat form -->
-
-            <form class="new-chat my-3">
-                <div class="input-group">
-                    <div class="input-group-prepend"></div>
-                    <input type="text" id="message" class="form-control" placeholder="Type your message" required>
-                    <div class="input-group-append">
-                        <input type="submit" class="btn" value="send">
-                    </div>
-                </div>
-            </form>
         </div>
 
         <!-- Date FNS -->

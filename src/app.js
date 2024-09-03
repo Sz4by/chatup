@@ -23,23 +23,33 @@ function generateRandomName() {
 
 
 window.onload = function() {
-    document.querySelector('body').classList.remove('hidden')
-
-    const submit = document.querySelector('#submit')
+    const root = document.querySelector('#root')
+    const pageLoader = document.querySelector('#page-loader')
     const chooseName = document.querySelector('#choose-name')
+    const submit = document.querySelector('#submit')
+    const main = document.querySelector('#main')
     const name = document.querySelector('#name')
-    main.style.display = 'none'
+
+    setTimeout(() => { root.classList.remove('hidden') }, 1500)
+    setTimeout(() => { pageLoader.classList.add('hidden')}, 1000)
+    
+    //main.style.display = 'none'
     chooseName.style.display = 'flex'
 
     submit.addEventListener('click', () => {
         this.room = 'public'
+        
         if (name.value.trim() === '' || name.value.trim() === undefined) {
             name.value = generateRandomName()
         }
+
         setTimeout(() => {
-            main.style.display = 'block'
             chooseName.style.display = 'none'
         }, 3000)
+
+        setTimeout(() => {  
+            main.classList.remove('hidden')
+        }, 3500)
     })
 }
 
