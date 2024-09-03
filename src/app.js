@@ -33,9 +33,8 @@ window.onload = function() {
     setTimeout(() => { root.classList.remove('hidden') }, 1500)
     setTimeout(() => { pageLoader.classList.add('hidden')}, 1000)
     
-    //main.style.display = 'none'
     chooseName.style.display = 'flex'
-
+    
     submit.addEventListener('click', () => {
         this.room = 'public'
         
@@ -43,16 +42,10 @@ window.onload = function() {
             name.value = generateRandomName()
         }
 
-        setTimeout(() => {
-            chooseName.style.display = 'none'
-        }, 3000)
-
-        setTimeout(() => {  
-            main.classList.remove('hidden')
-        }, 3500)
+        setTimeout(() => { main.classList.remove('hidden') }, 3500)
+        setTimeout(() => { chooseName.style.display = 'none' }, 3000)
     })
 }
-
 
 function loader(query) {
     let loading = '<img src="assets/spinner.gif" alt="Loading..." id="loader">'
@@ -67,7 +60,6 @@ const chatList = document.querySelector('.chat-list')
 const newChatForm = document.querySelector('.new-chat')
 const newNameForm = document.querySelector('.new-name')
 const updateMesssage = document.querySelector('.update-messsage')
-
 
 newChatForm.addEventListener('submit', e => {
     e.preventDefault()
