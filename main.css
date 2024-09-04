@@ -346,6 +346,6 @@
 }
 @media (max-height: 700px) {
     .chat-window {
-        height: 335px !important;
+        height: 365px !important;
     }
 }
