@@ -194,21 +194,21 @@
     justify-content: center;  
 }
 
-.main-header > h1 {
+.main-header > h2 {
     cursor: pointer;
     margin-right: 20px;
     color: rgb(31, 31, 31);
     transition: color 500ms;
 }
 
-.main-header > h1:hover {
+.main-header > h2:hover {
     color: #0DAEC0;
 }
 
 #icon {
-   width: 50px;
-   height: 50px; 
-   margin: 10px;
+   width: 40px;
+   height: 40px; 
+   margin: 15px 5px 10px;
    cursor: pointer;
 }
 
@@ -329,6 +329,26 @@
 }
 @media (min-width: 1024px) {
     .chat-window {
+        height: 835px !important;
+    }
+}
+@media (max-height: 1300px) {
+    .chat-window {
+        height: 835px !important;
+    }
+}
+@media (max-height: 1100px) {
+    .chat-window {
         height: 635px !important;
+    }
+}
+@media (max-height: 900px) {
+    .chat-window {
+        height: 435px !important;
+    }
+}
+@media (max-height: 700px) {
+    .chat-window {
+        height: 335px !important;
     }
 }
