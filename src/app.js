@@ -8,7 +8,7 @@
 
 function generateRandomName() {
     /* credit to: Thomas Konings @ https://gist.github.com/tkon99 */
-    function capitalize(string) { return string.charAt(0).toUpperCase() + string.slice(1) }
+    function capitalize(string) { return string && string.charAt(0).toUpperCase() + string.slice(1) }
     function randomNumber(min, max) { return Math.floor(Math.random() * (max - min)) + min }
     
     var first = ["abandoned","able","absolute","adorable","adventurous","academic","acceptable","youthful","yummy","zany","zealous","zesty","zigzag","rocky"];
@@ -47,11 +47,12 @@ window.onload = function() {
     })
 }
 
-function loader(query) {
+function load(query) {
     let loading = '<img src="assets/spinner.gif" alt="Loading..." id="loader">'
     document.querySelector(query).innerHTML = loading
     setTimeout(() => {
-        document.getElementById('loader').remove()
+        let loader = document.getElementById('loader')
+        loader && loader.remove()
     }, 1500)
 }
 
@@ -92,12 +93,11 @@ const username = localStorage.username ? localStorage.username : 'Anonymous'
 rooms.addEventListener('click', e => {
     if (e.target.tagName === 'BUTTON') {
         chatUI.clear()
-        loader('.chat-list')
+        load('.chat-list')
         setTimeout(() => {
             chatroom.updateRoom(e.target.getAttribute('id'))
             chatroom.getChats(chat => chatUI.render(chat))
-            setTimeout(() => { chatUI.scrollDown() }, 500)
-        }, 1200)
+        }, 1000)
     }
 })
 
@@ -105,9 +105,11 @@ rooms.addEventListener('click', e => {
 const chatUI = new ChatUI(chatList)
 const chatroom = new Chatroom('public', username)
 
-document.getElementById('submit').addEventListener('click', () => {
+submit.addEventListener('click', () => {
     chatroom.getChats((data) => {
         chatUI.render(data)
-        setTimeout(() => { chatUI.scrollDown() }, 3000)
+        setTimeout(() => { 
+            chatUI.scrollDown() 
+        }, 3500)
     }) 
 })

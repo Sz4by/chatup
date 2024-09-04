@@ -49,7 +49,7 @@ class Chatroom {
         const updated = document.querySelector('.update-messsage')
         const welcome = document.querySelector('#welcome-message')
 
-        main.style.display = 'none'
+        main.classList.add('hidden')
         validate.style.display = 'flex'
 
         function validatedMessage(name) {
@@ -68,7 +68,7 @@ class Chatroom {
         }
 
         function closeValidation() {
-            main.style.display = 'block'
+            main.classList.remove('hidden')
             validate.style.display = 'none'
         }
 
@@ -90,10 +90,10 @@ class Chatroom {
             }
         })
 
-        cancel.addEventListener('click', () => {
+        cancel.addEventListener('click', () => {            
+            clearError()
             closeValidation()
             publicRoom.click()
-            clearError()
         })
     }
 
@@ -103,10 +103,16 @@ class Chatroom {
                 this.validate()
             } 
         }
+        
         this.room = room
         console.log(`Updated room to ${room}`)
+        
         if (this.unsub) {
             this.unsub()
         }
+
+        setTimeout(() => { 
+            chatUI.scrollDown() 
+        }, 1000)
     }
 }

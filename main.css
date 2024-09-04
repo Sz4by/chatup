@@ -12,11 +12,20 @@
 #page-loader {
     top: 50%;
     left: 50%;
-    width: 300px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    margin: -100px 0 0 -150px;
+    transform: translate(-50%, -50%);
     animation: fadeOut 1.5s;
+}
+
+#loader {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-top: 225px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* CHOOSE NAME WINDOW */
@@ -39,9 +48,9 @@
     padding: 20px;
     text-align: center;
     background: #FFF;
-    border: 1px solid #22AAB9;
     border-radius: 5px;
     position: relative;
+    border: 1px solid #22AAB9;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
@@ -207,15 +216,6 @@
     scroll-behavior: smooth;
 }
 
-#loader {
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin-top: 125px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .chat-window::-webkit-scrollbar {
     width: 0.10rem;
 }
@@ -225,7 +225,7 @@
 }
 
 .container {
-    max-width: 600;
+    max-width: 1000px;
 }
 
 .btn {
@@ -322,9 +322,6 @@
 @media (max-width: 1024px) {
     .chat-window {
         font-size: 11px !important;
-    }
-    .main-header {
-        display: none;
     }
     #secret {
         margin-right: 15px;
