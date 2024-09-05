@@ -23,15 +23,15 @@ function generateRandomName() {
 
 
 window.onload = function() {
-    const root = document.querySelector('#root')
-    const pageLoader = document.querySelector('#page-loader')
     const chooseName = document.querySelector('#choose-name')
+    const name = document.querySelector('#name')
+    const loader = document.getElementById('loader')
+    const root = document.querySelector('#root')
     const submit = document.querySelector('#submit')
     const main = document.querySelector('#main')
-    const name = document.querySelector('#name')
 
-    setTimeout(() => { root.classList.remove('hidden') }, 1500)
-    setTimeout(() => { pageLoader.classList.add('hidden')}, 1000)
+    setTimeout(() => { loader.remove() }, 1000)
+    setTimeout(() => { root.classList.remove('hidden') }, 2000)
     
     chooseName.style.display = 'flex'
     
@@ -76,6 +76,7 @@ newChatForm.addEventListener('submit', e => {
 
 newNameForm.addEventListener('submit', e => {
     e.preventDefault()
+
     const newName = newNameForm.name.value.trim().replace(/ /g, '')
     chatroom.updateName(newName)
     newNameForm.reset()
