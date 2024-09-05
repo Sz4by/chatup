@@ -30,8 +30,10 @@ window.onload = function() {
     const submit = document.querySelector('#submit')
     const main = document.querySelector('#main')
 
-    setTimeout(() => { loader.remove() }, 1000)
-    setTimeout(() => { root.classList.remove('hidden') }, 2000)
+    setTimeout(() => { 
+        loader.remove() 
+        root.classList.remove('hidden')
+    }, 1000)
     
     chooseName.style.display = 'flex'
     
