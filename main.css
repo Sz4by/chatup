@@ -215,6 +215,7 @@
 
 .chat-window::-webkit-scrollbar-thumb {
     background-color: #0DAEC0;
+    width: 0.15rem;
 }
 
 .container {
@@ -256,6 +257,7 @@
     font-size: 1.2em;
     color: rgb(31, 31, 31);
     border: 1px solid gainsboro;
+    border-radius: 0 !important;
     font-family: 'Montserrat', sans-serif;
 }
 
