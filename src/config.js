@@ -5,14 +5,14 @@
 
 // https://console.firebase.google.com/u/0/project/chat-rooms-daf8d/database/firestore/data~2F
 const config = {
-    apiKey: "AIzaSyDVREeTWwRZi2357hAxMQMaO5rGqzl8lKw",
-    authDomain: "chat-rooms-daf8d.firebaseapp.com",
-    databaseURL: "https://chat-rooms-daf8d.firebaseio.com",
-    projectId: "chat-rooms-daf8d",
-    storageBucket: "chat-rooms-daf8d.appspot.com",
-    messagingSenderId: "72412532819",
-    appId: "1:72412532819:web:856140823dc7e28df1b6a6",
-    measurementId: "G-DPND3KNEZW"
+  apiKey: "AIzaSyBiIir5Y5r0bsbyducte7PpVreWXzu-o-M",
+  authDomain: "szaby-5d8be.firebaseapp.com",
+  databaseURL: "https://szaby-5d8be-default-rtdb.firebaseio.com",
+  projectId: "szaby-5d8be",
+  storageBucket: "szaby-5d8be.appspot.com",
+  messagingSenderId: "215276216449",
+  appId: "1:215276216449:web:94f0f17cbd74c2336fad80",
+  measurementId: "G-EL7YSFVQZ0"
 }
 
 // Initialize Firebase
